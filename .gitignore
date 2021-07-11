@@ -16,6 +16,7 @@ bin/
 *.ipr
 *.iml
 *.iws
+!quarkus-web-movies-rest-api.iml
 
 # NetBeans
 nb-configuration.xml
