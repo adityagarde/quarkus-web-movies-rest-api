@@ -1,0 +1,126 @@
+---
+openapi: 3.0.3
+info:
+  title: Generated API
+  version: "1.0"
+paths:
+  /hello:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+  /jmovies:
+    get:
+      responses:
+        "200":
+          description: OK
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Movie'
+      responses:
+        "200":
+          description: OK
+  /jmovies/size:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                format: int32
+                type: integer
+  /jmovies/{id}:
+    put:
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          format: int32
+          type: integer
+      - name: newTitle
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+    delete:
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          description: OK
+  /movies:
+    get:
+      responses:
+        "200":
+          description: OK
+    post:
+      requestBody:
+        content:
+          text/plain:
+            schema:
+              type: string
+      responses:
+        "200":
+          description: OK
+  /movies/size:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                format: int32
+                type: integer
+  /movies/{movieToUpdate}:
+    put:
+      parameters:
+      - name: movieToUpdate
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: movie
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+  /movies/{movie}:
+    delete:
+      parameters:
+      - name: movie
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+components:
+  schemas:
+    Movie:
+      type: object
+      properties:
+        id:
+          format: int32
+          type: integer
+        title:
+          type: string

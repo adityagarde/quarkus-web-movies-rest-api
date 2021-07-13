@@ -1,0 +1,175 @@
+---
+openapi: 3.0.3
+info:
+  title: Movie APIs
+  description: Movie Application
+  license:
+    name: MIT
+    url: https://github.com/adityagarde/quarkus-web-movies-rest-api
+  version: 1.0.0
+tags:
+- name: movies
+  description: Movies
+- name: Movie Resource
+  description: Movie REST APIs
+paths:
+  /hello:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+  /jmovies:
+    get:
+      tags:
+      - Movie Resource
+      summary: Get Movies
+      description: Fetches all Movies in a List
+      operationId: getMovies
+      responses:
+        "200":
+          description: Operation Completed
+          content:
+            application/json: {}
+    post:
+      tags:
+      - Movie Resource
+      summary: Creates Movie
+      description: Adds new movie to the list
+      operationId: addMovie
+      requestBody:
+        description: Movie to create
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Movie'
+        required: true
+      responses:
+        "201":
+          description: Movie Created
+          content:
+            application/json: {}
+  /jmovies/size:
+    get:
+      tags:
+      - Movie Resource
+      summary: Count Movies
+      description: Returns size of the Movie List
+      operationId: getMovieCount
+      responses:
+        "200":
+          description: Operation Completed
+          content:
+            text/plain: {}
+  /jmovies/{id}:
+    put:
+      tags:
+      - Movie Resource
+      summary: Updates Movie
+      description: Updates existing movie
+      operationId: updateMovie
+      parameters:
+      - name: id
+        in: path
+        description: Movie id
+        required: true
+        schema:
+          format: int32
+          type: integer
+      - name: newTitle
+        in: query
+        description: Movie Title
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Movie Updated
+          content:
+            application/json: {}
+    delete:
+      tags:
+      - Movie Resource
+      summary: Deletes Movie
+      description: Deletes existing movie
+      operationId: deleteMovie
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "204":
+          description: Movie Deleted
+          content:
+            application/json: {}
+        "400":
+          description: Movie not Found
+          content:
+            application/json: {}
+  /movies:
+    get:
+      responses:
+        "200":
+          description: OK
+    post:
+      requestBody:
+        content:
+          text/plain:
+            schema:
+              type: string
+      responses:
+        "200":
+          description: OK
+  /movies/size:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                format: int32
+                type: integer
+  /movies/{movieToUpdate}:
+    put:
+      parameters:
+      - name: movieToUpdate
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: movie
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+  /movies/{movie}:
+    delete:
+      parameters:
+      - name: movie
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+components:
+  schemas:
+    Movie:
+      description: Movie representation
+      type: object
+      properties:
+        id:
+          format: int32
+          type: integer
+        title:
+          type: string

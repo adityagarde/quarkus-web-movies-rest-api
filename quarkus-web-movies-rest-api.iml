@@ -71,20 +71,23 @@
     <orderEntry type="library" name="Maven: com.github.java-json-tools:jackson-coreutils:2.0" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.4.2.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:2.0.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.quarkus:quarkus-arc:2.0.1.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.quarkus.arc:arc:2.0.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.quarkus:quarkus-smallrye-openapi:2.0.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.smallrye:smallrye-open-api-core:2.1.6" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.microprofile.openapi:microprofile-openapi-api:2.0.1-RC1" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.microprofile.config:microprofile-config-api:2.0" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.12.3" level="project" />
+    <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.28" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss:jandex:2.3.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.quarkus:quarkus-core:2.0.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.annotation:jakarta.annotation-api:1.3.5" level="project" />
     <orderEntry type="library" name="Maven: jakarta.enterprise:jakarta.enterprise.cdi-api:2.0.2" level="project" />
     <orderEntry type="library" name="Maven: jakarta.el:jakarta.el-api:3.0.3" level="project" />
     <orderEntry type="library" name="Maven: jakarta.interceptor:jakarta.interceptor-api:1.2.5" level="project" />
-    <orderEntry type="library" name="Maven: jakarta.annotation:jakarta.annotation-api:1.3.5" level="project" />
-    <orderEntry type="library" name="Maven: jakarta.transaction:jakarta.transaction-api:1.3.3" level="project" />
-    <orderEntry type="library" name="Maven: io.quarkus:quarkus-core:2.0.1.Final" level="project" />
     <orderEntry type="library" name="Maven: jakarta.inject:jakarta.inject-api:1.0" level="project" />
     <orderEntry type="library" name="Maven: io.quarkus:quarkus-ide-launcher:2.0.1.Final" level="project" />
     <orderEntry type="library" name="Maven: io.quarkus:quarkus-development-mode-spi:2.0.1.Final" level="project" />
     <orderEntry type="library" name="Maven: io.smallrye.config:smallrye-config:2.3.0" level="project" />
     <orderEntry type="library" name="Maven: io.smallrye.config:smallrye-config-core:2.3.0" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.microprofile.config:microprofile-config-api:2.0" level="project" />
     <orderEntry type="library" name="Maven: io.smallrye.common:smallrye-common-expression:1.6.0" level="project" />
     <orderEntry type="library" name="Maven: io.smallrye.common:smallrye-common-function:1.6.0" level="project" />
     <orderEntry type="library" name="Maven: io.smallrye.common:smallrye-common-constraint:1.6.0" level="project" />
@@ -98,6 +101,10 @@
     <orderEntry type="library" name="Maven: org.graalvm.sdk:graal-sdk:21.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.wildfly.common:wildfly-common:1.5.4.Final-format-001" level="project" />
     <orderEntry type="library" name="Maven: io.quarkus:quarkus-bootstrap-runner:2.0.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.quarkus:quarkus-swagger-ui:2.0.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.quarkus:quarkus-arc:2.0.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.quarkus.arc:arc:2.0.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.transaction:jakarta.transaction-api:1.3.3" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api:1.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: io.quarkus:quarkus-junit5:2.0.1.Final" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: io.quarkus:quarkus-bootstrap-core:2.0.1.Final" level="project" />
@@ -136,7 +143,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.maven.resolver:maven-resolver-transport-wagon:1.6.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.maven.wagon:wagon-http:3.4.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.maven.wagon:wagon-http-shared:3.4.3" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.jsoup:jsoup:1.12.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.maven.wagon:wagon-provider-api:3.4.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.maven.wagon:wagon-file:3.4.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: io.quarkus:quarkus-bootstrap-gradle-resolver:2.0.1.Final" level="project" />
@@ -158,7 +164,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: io.quarkus:quarkus-jsonp-deployment:2.0.1.Final" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: io.quarkus:quarkus-jsonp:2.0.1.Final" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.glassfish:jakarta.json:1.1.6" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.jboss:jandex:2.3.0.Final" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jboss.logging:commons-logging-jboss-logging:1.0.0.Final" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter:5.7.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.7.2" level="project" />
@@ -188,5 +193,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.3" level="project" />
     <orderEntry type="library" name="Maven: jakarta.activation:jakarta.activation-api:1.2.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.sun.xml.bind:jaxb-impl:2.3.3" level="project" />
+    <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.12.1" level="project" />
   </component>
 </module>

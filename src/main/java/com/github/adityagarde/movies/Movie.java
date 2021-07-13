@@ -1,5 +1,8 @@
 package com.github.adityagarde.movies;
 
+import org.eclipse.microprofile.openapi.annotations.media.Schema;
+
+@Schema(name = "Movie", description = "Movie representation")
 public class Movie {
 
     private int id;
