@@ -9,7 +9,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Path("/jmovies")
-public class MovieJSONController {
+public class MovieJSONResource {
 
     public static List<Movie> movies = new ArrayList<>();
 

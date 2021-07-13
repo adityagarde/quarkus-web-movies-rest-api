@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Path("/movies")
-public class MovieController {
+public class MovieResource {
 
     public static List<String> movies = new ArrayList<>();
 
